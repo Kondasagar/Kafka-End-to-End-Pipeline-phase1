@@ -12,17 +12,18 @@
 ### Once logged into new VM, run below commands
 With only 2GB RAM, swap space can help avoid memory-related crashes.
 Create a 2GB swap file
-* Enable Swap Space
-* 
-sudo fallocate -l 2G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-echo '/swapfile swap swap defaults 0 0' | sudo tee -a /etc/fstab
 
- Install Networking and Essential Tools
+### Enable Swap Space
 
- sudo yum install wget curl net-tools -y
+* $ sudo fallocate -l 2G /swapfile
+* $ sudo chmod 600 /swapfile
+* $ sudo mkswap /swapfile
+* $ sudo swapon /swapfile
+* $ echo '/swapfile swap swap defaults 0 0' | sudo tee -a /etc/fstab
+
+### Install Networking and Essential Tools
+
+$ sudo yum install wget curl net-tools -y
 
  
 
